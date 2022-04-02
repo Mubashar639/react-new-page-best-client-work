@@ -1,8 +1,15 @@
 import React from 'react';
 import { GiHamburgerMenu } from 'react-icons/gi';
 import { MdOutlineRestaurantMenu } from 'react-icons/md';
+import { Link } from 'react-router-dom';
 import images from '../../constants/images';
 import './Navbar.css';
+
+/**
+  * page changes router
+  * Add Link tag from react router dom
+  * and pass "to" to page which you want to go
+  */
 
 const Navbar = () => {
   const [toggleMenu, setToggleMenu] = React.useState(false);
@@ -17,6 +24,7 @@ const Navbar = () => {
         <li className="p__opensans"><a href="#menu">Menu</a></li>
         <li className="p__opensans"><a href="#awards">Awards</a></li>
         <li className="p__opensans"><a href="#contact">Contact</a></li>
+        <Link to="/other-page"><li className="p__opensans"> Other Page</li></Link>
       </ul>
       <div className="app__navbar-login">
         <a href="#login" className="p__opensans">Log In / Registration</a>
